@@ -1,0 +1,86 @@
+.brand {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url(../images/wall.jpg);
+  @include bg-image;
+  &__container {
+    @include flex-center(space-between);
+  }
+
+  &__title {
+    @include title($size: 36px);
+    color: $dark;
+    max-width: 550px;
+    margin-bottom: 50px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 70%;
+      left: 0;
+      top: 50px;
+      background-color: $dark;
+    }
+
+    @media (min-width: $screen-desktop) {
+      @include title;
+      color: $dark;
+      max-width: 550px;
+      margin-bottom: 50px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 70%;
+        left: 0;
+        top: 50px;
+        background-color: $dark;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: $H600;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    color: $dark;
+    margin-bottom: 50px;
+  }
+  &__list {
+    width: 100%;
+    @include flex-center;
+
+    @media (min-width: $screen-desktop) {
+      width: 100%;
+      @include flex-row(space-between);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__item {
+    flex: 0 1 25%;
+  }
+  &__wrap {
+    max-width: 350px;
+
+    @media (min-width: $screen-desktop) {
+      max-height: 150px;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease 0s;
+  }
+  &__image:hover {
+    transform: translateY(10px);
+    box-shadow: -1px -7px 29px 0px rgba(0, 0, 0, 0.75);
+  }
+}

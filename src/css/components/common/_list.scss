@@ -1,0 +1,17 @@
+.list {
+  width: 100%;
+  @include flex-row(space-between);
+
+  //   &__item {
+  //     flex: 0 1 33.333%;
+  //   }
+  &__wrap {
+    min-height: 50px;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease 0s;
+  }
+}

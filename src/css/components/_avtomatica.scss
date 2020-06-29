@@ -1,0 +1,85 @@
+.avtomatica {
+  @extend %section;
+  position: relative;
+
+  &__bft {
+    @extend %article;
+  }
+  &__nice {
+    @extend %article;
+  }
+  &__roger {
+    @extend %article;
+  }
+  &__gant {
+    @extend %article;
+  }
+  &__top {
+    display: inline-block;
+    // display: none;
+    position: absolute;
+    top: 650px;
+    right: 100px;
+    &--active {
+      position: fixed;
+      top: 650px;
+      right: 100px;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    @include flex-center;
+    margin-bottom: 50px;
+
+    @media (min-width: $screen-tablet) {
+      @include flex-row(space-around);
+    }
+
+    @media (min-width: $screen-desktop) {
+      width: 100%;
+      @include flex-row(space-around);
+      margin-bottom: 50px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 40px;
+    @media (min-width: $screen-tablet) {
+      margin-bottom: 0px;
+    }
+
+    @media (min-width: $screen-desktop) {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__title {
+    @include title;
+    margin-bottom: 30px;
+  }
+
+  &__line {
+    height: 2px;
+    width: 80%;
+    background-color: $blue;
+    margin-bottom: 30px;
+  }
+
+  &__line--red {
+    height: 3px;
+    width: 100%;
+    background-color: red;
+    margin-bottom: 80px;
+  }
+  &__subtitle {
+    font-size: $H600;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    color: $dark;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+}

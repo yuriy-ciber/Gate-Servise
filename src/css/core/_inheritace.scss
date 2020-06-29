@@ -1,0 +1,8 @@
+%section {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+%article {
+  width: 100%;
+  @include flex-center;
+}

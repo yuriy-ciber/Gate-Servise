@@ -1,0 +1,118 @@
+.contact {
+  @extend %section;
+  // height: 100vh;
+  // padding-top: 100px;
+  // padding-bottom: 60px;
+
+  &__container {
+    @include flex-center(space-betwwen);
+    margin: 0 auto;
+    pad: 0px 10px;
+    // height: 100vh;
+  }
+
+  &__title {
+    @include title($size: 45px);
+    margin-bottom: 50px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 70%;
+      left: 0;
+      top: 80px;
+      background-color: $grey-dark;
+
+      @media (min-width: $screen-tablet) {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 70%;
+        left: 0;
+        top: 60px;
+        background-color: $grey-dark;
+      }
+
+      @media (min-width: $screen-desktop) {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 70%;
+        left: 0;
+        top: 60px;
+        background-color: $grey-dark;
+      }
+    }
+  }
+  &__subtitle {
+    font-size: $H300;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    color: $grey-dark;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  &__list {
+    // width: 100%;
+    @include flex-center;
+
+    @media (min-width: $screen-desktop) {
+      width: 100%;
+      @include flex-row(space-between);
+    }
+  }
+
+  &__item {
+    @include flex-center;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: 1024px) {
+      @include flex-center;
+      &:not(:last-child) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  &__wrap {
+    // max-height: 150px;
+    @media (min-width: 1024px) {
+      max-height: 150px;
+    }
+  }
+
+  &__wrap--lifecel {
+    width: 250px;
+
+    @media (min-width: $screen-desktop) {
+      width: 385px;
+    }
+  }
+
+  &__phone {
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  &__logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease 0s;
+    margin-bottom: 50px;
+
+    @media (min-width: 1024px) {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.5s ease 0s;
+      margin-bottom: 50px;
+    }
+  }
+}

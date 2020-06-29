@@ -1,0 +1,19 @@
+.button {
+  background-color: $blue;
+  font-family: $base-font;
+  font-size: $H10;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  text-align: center;
+  border: none;
+  width: 100%;
+  padding: 12px 24px;
+  outline: none;
+  cursor: pointer;
+
+  @media screen and (min-width: $screen-desktop) {
+    width: fit-content;
+  }
+}

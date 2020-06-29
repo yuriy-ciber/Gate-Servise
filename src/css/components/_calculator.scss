@@ -1,0 +1,110 @@
+.calculator {
+  // @extend %section;
+  height: 100vh;
+  background-image: linear-gradient(
+      to top,
+      rgba(81, 103, 228, 0.8),
+      rgba(238, 100, 180, 0.5)
+    ),
+    url(../../images/GantPlus_5.jpg);
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  background-size: 180%;
+  padding-top: 30px;
+
+  @media (min-width: $screen-tablet) {
+    padding-top: 80px;
+    background-size: 265%;
+  }
+  @media (min-width: $screen-desktop) {
+    padding-top: 110px;
+    padding-bottom: 50px;
+
+    @include bg-image;
+  }
+
+  &__container {
+    @include flex-center;
+  }
+  &__title {
+    @include title($weight: 400, $color: $white);
+    margin-bottom: 60px;
+    @media (min-width: $screen-desktop) {
+      @include title($weight: 400, $color: $white);
+      margin-bottom: 40px;
+    }
+  }
+
+  &__body {
+    background-color: rgba(0, 0, 0, 0.4);
+    flex: 1 1;
+    border: 2 px solid $grey-dark;
+    border-radius: 8px;
+    width: 350px;
+    box-shadow: 0px 16px 20px 5px rgba(0, 0, 0, 0.75);
+    padding: 25px;
+
+    @media (min-width: $screen-tablet) {
+      width: 550px;
+    }
+    @media (min-width: $screen-desktop) {
+      width: 600px;
+    }
+  }
+
+  &__size {
+    @include flex-center(
+      $justify-content: flex-start,
+      $align-items: flex-start
+    );
+    margin-bottom: 20px;
+  }
+  &__label {
+    @include font($color: $white);
+    opacity: 0.7;
+    margin-bottom: 15px;
+  }
+  &__input {
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid $dark;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  &__brand {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &__avtomatic {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &__select {
+    background-color: transparent;
+    @include font($color: $blue);
+    opacity: 0.7;
+    padding-left: 15px;
+    width: 40%;
+  }
+  &__result {
+    width: 100%;
+  }
+  &__button {
+    align-self: start;
+    font-size: 16px;
+    margin-bottom: 20px;
+    &:hover {
+      box-shadow: $btn-shadow;
+    }
+  }
+  &__out {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__cost {
+    font-size: $H300;
+    color: $blue;
+  }
+}

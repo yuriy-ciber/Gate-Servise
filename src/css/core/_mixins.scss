@@ -1,0 +1,65 @@
+@mixin svg($size: 32px, $fill: black) {
+  width: $size;
+  height: $size;
+  fill: $fill;
+}
+@mixin flex-center(
+  $justify-content: center,
+  $align-items: center,
+  $direction: column,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $wrap;
+}
+
+@mixin flex-row(
+  $justify-content: center,
+  $align-items: center,
+  $direction: row,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $wrap;
+}
+@mixin media($screen: $screen-desktop) {
+  @media screen and (min-width: $screen) {
+    @content;
+  }
+}
+@mixin bg-image($size: 100%, $repeat: no-reapeat, $position: 100% 100%) {
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $position;
+}
+@mixin title(
+  $family: $base-font,
+  $size: 30px,
+  $weight: 700,
+  $transform: uppercase,
+  $color: $blue
+) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  text-transform: $transform;
+  color: $color;
+}
+
+@mixin font(
+  $family: $secondary-font,
+  $size: $H200,
+  $weight: 400,
+  $color: $dark
+) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}

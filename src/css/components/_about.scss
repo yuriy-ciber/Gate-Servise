@@ -1,0 +1,90 @@
+.about {
+  @extend %section;
+
+  &__container {
+    @include flex-center(space-between);
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    @include title;
+    position: relative;
+    text-align: center;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 70%;
+      left: 30px;
+      top: 50px;
+      background-color: $grey-dark;
+    }
+
+    @media (min-width: $screen-tablet) {
+      &::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 70%;
+        left: 30px;
+        top: 80px;
+        background-color: $grey-dark;
+      }
+
+      @media (min-wdth: $screen-desktop) {
+        &::after {
+          content: "";
+          position: absolute;
+          height: 3px;
+          width: 70%;
+          left: 0;
+          top: 50px;
+          background-color: $grey-dark;
+        }
+      }
+    }
+  }
+  &__subtitle {
+    font-size: $H300;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    color: $grey-dark;
+    max-width: 600px;
+    margin-bottom: 50px;
+  }
+  &__list {
+    width: 100%;
+    @include flex-center;
+
+    @media (min-width: $screen-desktop) {
+      width: 100%;
+      @include flex-row(space-between);
+    }
+  }
+  &__item {
+    flex: 0 1 33.333%;
+  }
+  &__wrap {
+    max-width: 400px;
+
+    @media ($screen-desktop) {
+      min-height: 50px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease 0s;
+  }
+  &__image:hover {
+    transform: translateY(10px);
+    box-shadow: -1px -7px 29px 0px rgba(0, 0, 0, 0.75);
+  }
+  &__logo {
+    max-width: 100%;
+    display: block;
+  }
+}
