@@ -5,22 +5,26 @@
     </h2>
     <div class="calculator__body animate__animated">
       <div class="calculator__size">
-        <label class="calculator__label" for="">Ширина</label>
+        <label class="calculator__label" for="width">Ширина</label>
         <input
+          id="width"
           class="input calculator__input calculator__item--width"
           type="number"
           placeholder="ширина проема в мм"
+          tabindex="1"
         />
-        <label class="calculator__label" for="">Высота</label>
+        <label class="calculator__label" for="length">Высота</label>
         <input
+          id="length"
           class="input calculator__input calculator__item--heigth"
           type="number"
           placeholder="высота проема в мм"
+          tabindex="2"
         />
       </div>
       <div class="calculator__brand">
         <label for="brand" class="calculator__label">Производитель</label>
-        <select name="brand" id="brand" class="calculator__select">
+        <select name="brand" id="brand" class="calculator__select" tabindex="3">
           <option value="100">Alutech</option>
           <option value="180">DoorHan</option>
           <option value="90">Gant</option>
@@ -28,14 +32,21 @@
       </div>
       <div class="calculator__avtomatic">
         <label for="avtomatic" class="calculator__label">Автоматика</label>
-        <select name="avtomatic" id="avtomatic" class="calculator__select">
+        <select
+          name="avtomatic"
+          id="avtomatic"
+          class="calculator__select"
+          tabindex="4"
+        >
           <option value="150">DoorHan</option>
           <option value="250">Alutech</option>
           <option value="350">Nice</option>
         </select>
       </div>
       <div class="calculator__result">
-        <button id="calc" class="calculator__button button">Расчитать</button>
+        <button id="calc" class="calculator__button button" tabindex="5">
+          Расчитать
+        </button>
         <div class="calculator__out">
           <label class="calculator__label"> Стоимость</label>
           <span class="calculator__cost"></span>

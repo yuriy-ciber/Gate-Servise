@@ -82,8 +82,11 @@
 
   &__wrap {
     // max-height: 150px;
-    @media (min-width: 1024px) {
-      max-height: 150px;
+    @media (min-width: $screen-tablet) {
+      max-width: 200px;
+    }
+    @media (min-width: $screen-desktop) {
+      max-width: 200px;
     }
   }
 

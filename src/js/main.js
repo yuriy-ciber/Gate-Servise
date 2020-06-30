@@ -1,4 +1,3 @@
-import { glide } from "./slider";
 // import { useMap } from "./map";
 document.addEventListener("DOMContentLoaded", () => {
   const $burger = document.querySelector(".header__burger");
@@ -13,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     $burger.classList.toggle("header__burger--active");
     $line.classList.toggle("header__burger-line--active");
     $menu.classList.toggle("header__menu--active");
-    $body.classList.toggle("body__lock");
+    // $body.classList.toggle("body__lock");
 
     console.log(event);
   };
@@ -96,8 +95,8 @@ function getResult() {
   let cost = square * Number(typeBrand.value) + Number(typeAvtomatic.value);
   let $out = document.querySelector(".calculator__cost");
   $out.innerHTML = `${cost} $`;
-
-  console.log(cost);
+  widthGate.value = "";
+  heightGate.value = "";
 }
 typeAvtomatic.onchange = getResult;
 typeBrand.onchange = getResult;

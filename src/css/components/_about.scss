@@ -16,7 +16,7 @@
       height: 3px;
       width: 70%;
       left: 30px;
-      top: 50px;
+      top: 120px;
       background-color: $grey-dark;
     }
 
@@ -27,7 +27,7 @@
         height: 3px;
         width: 70%;
         left: 30px;
-        top: 80px;
+        top: 50px;
         background-color: $grey-dark;
       }
 
@@ -40,6 +40,7 @@
           left: 0;
           top: 50px;
           background-color: $grey-dark;
+          // border-radius: 0 0 50% 50%;
         }
       }
     }
