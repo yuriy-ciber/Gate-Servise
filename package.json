@@ -52,6 +52,7 @@
     "through2": "^3.0.1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.1",
     "@glidejs/glide": "^3.4.1"
   }
 }

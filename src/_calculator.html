@@ -3,7 +3,10 @@
     <h2 class="calculator__title animate__animated">
       Расчет стоимости секционных ворот
     </h2>
-    <div class="calculator__body animate__animated">
+    <div
+      class="calculator__body"
+      uk-scrollspy="cls: uk-animation-fade; repeat: true"
+    >
       <div class="calculator__size">
         <label class="calculator__label" for="width">Ширина</label>
         <input
@@ -24,7 +27,12 @@
       </div>
       <div class="calculator__brand">
         <label for="brand" class="calculator__label">Производитель</label>
-        <select name="brand" id="brand" class="calculator__select" tabindex="3">
+        <select
+          name="brand"
+          id="manufacturer"
+          class="calculator__select"
+          tabindex="3"
+        >
           <option value="100">Alutech</option>
           <option value="180">DoorHan</option>
           <option value="90">Gant</option>
@@ -46,6 +54,9 @@
       <div class="calculator__result">
         <button id="calc" class="calculator__button button" tabindex="5">
           Расчитать
+        </button>
+        <button id="clear" class="calculator__button button" tabindex="6">
+          Очистить
         </button>
         <div class="calculator__out">
           <label class="calculator__label"> Стоимость</label>

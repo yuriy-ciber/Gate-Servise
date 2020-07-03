@@ -40,7 +40,7 @@
 }
 @mixin title(
   $family: $base-font,
-  $size: 30px,
+  $size: 28px,
   $weight: 700,
   $transform: uppercase,
   $color: $blue
@@ -54,7 +54,7 @@
 
 @mixin font(
   $family: $secondary-font,
-  $size: $H200,
+  $size: $H100,
   $weight: 400,
   $color: $dark
 ) {

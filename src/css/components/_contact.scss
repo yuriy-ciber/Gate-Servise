@@ -12,7 +12,7 @@
   }
 
   &__title {
-    @include title($size: 45px);
+    @include title($size: 28px);
     margin-bottom: 50px;
     position: relative;
 
@@ -54,10 +54,9 @@
     color: $grey-dark;
     max-width: 600px;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   &__list {
-    // width: 100%;
     @include flex-center;
 
     @media (min-width: $screen-desktop) {
@@ -81,7 +80,6 @@
   }
 
   &__wrap {
-    // max-height: 150px;
     @media (min-width: $screen-tablet) {
       max-width: 200px;
     }
@@ -100,7 +98,7 @@
 
   &__phone {
     display: block;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600;
   }
   &__logo {

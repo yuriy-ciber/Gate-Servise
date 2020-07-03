@@ -42,61 +42,44 @@ const headerBackGround = () => {
 
 headerBackGround();
 //---------------анимация ссылки нв верх-----------------
-const viewIcon = () => {
-  const iconToTop = document.querySelector(".avtomatica__top");
-  window.onscroll = () => {
-    if (window.pageYOffset > 2000) {
-      iconToTop.classList.remove("animate__backOutRight");
-      iconToTop.classList.add("animate__bounceInRight");
-      iconToTop.classList.add("avtomatica__top--active");
-    } else if (window.pageYOffset < 2000) {
-      iconToTop.classList.remove("animate__bounceInRight");
-      iconToTop.classList.add("animate__backOutRight");
-      iconToTop.classList.remove("avtomatica__top--active");
-    }
-  };
-};
 
-viewIcon();
-
-//--------------Анимация формы калькулятора----------------
-const animateCalculator = () => {
-  const bodyCalculator = document.querySelector(".calculator__body");
-  const titleCalculator = document.querySelector(".calculator__title");
-  window.onscroll = () => {
-    if (window.pageYOffset > 9740) {
-      titleCalculator.classList.add("animate__bounceInRight");
-      titleCalculator.classList.remove("animate__bounceOutRight");
-      bodyCalculator.classList.add("animate__bounceInLeft");
-      bodyCalculator.classList.remove("animate__bounceOutLeft");
-    } else if (window.pageYOffset < 9740) {
-      titleCalculator.classList.remove("animate__bounceInRight");
-      titleCalculator.classList.add("animate__bounceOutRight");
-      bodyCalculator.classList.remove("animate__bounceInLeft");
-      bodyCalculator.classList.add("animate__bounceOutLeft");
-    }
-  };
-};
-// animateCalculator();
+const iconToTop = document.querySelector(".avtomatica__top");
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 2300) {
+    iconToTop.classList.add("avtomatica__top--active");
+    iconToTop.classList.add("animate__fadeInDownBig");
+  } else {
+    iconToTop.classList.remove("avtomatica__top--active");
+    iconToTop.classList.add("animate__fadeInDownBig");
+  }
+});
 
 //------------- Расчет стоимости ворот-------------------
 
 document.getElementById("calc").onclick = getResult;
-
+document.getElementById("clear").onclick = clearCalculator;
 const widthGate = document.querySelector(".calculator__item--width");
 const heightGate = document.querySelector(".calculator__item--heigth");
 const typeAvtomatic = document.getElementById("avtomatic");
-const typeBrand = document.getElementById("brand");
+const typeBrand = document.getElementById("manufacturer");
+const $out = document.querySelector(".calculator__cost");
 
 function getResult() {
-  let square =
-    (Number(widthGate.value) / 1000) * (Number(heightGate.value) / 1000);
-  console.log(typeof typeBrand.value);
-  let cost = square * Number(typeBrand.value) + Number(typeAvtomatic.value);
-  let $out = document.querySelector(".calculator__cost");
-  $out.innerHTML = `${cost} $`;
+  if (widthGate.value !== "" && heightGate.value !== "") {
+    let square =
+      (Number(widthGate.value) / 1000) * (Number(heightGate.value) / 1000);
+    console.log(typeof typeBrand.value);
+    let cost = square * Number(typeBrand.value) + Number(typeAvtomatic.value);
+    $out.innerHTML = `${cost} $`;
+  } else alert("Введите размеры ворот !");
+}
+
+// Сброс калькулятора
+function clearCalculator() {
   widthGate.value = "";
   heightGate.value = "";
+  $out.innerHTML = "";
 }
+
 typeAvtomatic.onchange = getResult;
 typeBrand.onchange = getResult;
