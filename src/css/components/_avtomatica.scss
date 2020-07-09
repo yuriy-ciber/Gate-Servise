@@ -15,28 +15,68 @@
     @extend %article;
   }
   &__top {
+    position: absolute;
+    padding: 5px 10px;
+    background-color: rgba($blue, 0.8);
+    border-radius: 3px;
+    color: $white;
+    pointer-events: none;
+    transition: all 0.4s;
     display: none;
+    box-shadow: 0px 10px 40px 0px rgba(167, 17, 17, 0.8);
+    z-index: 5;
+    top: 600px;
+    right: 40px;
 
     @media (min-width: $screen-desktop) {
-      display: inline-block;
       position: absolute;
       padding: 5px 10px;
-      background-color: rgba($blue, 0.6);
+      background-color: rgba($blue, 0.8);
       border-radius: 3px;
       color: $white;
       pointer-events: none;
       transition: all 0.4s;
-      display: none;
-      box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.6);
+      dislplay: none;
+      box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.6);
       z-index: 5;
     }
 
     &--active {
       pointer-events: auto;
-      display: flex;
+      display: block;
       position: fixed;
-      top: 650px;
-      right: 100px;
+      top: 550px;
+      right: 132px;
+
+      @media (min-width: $screen-iphone6) {
+        pointer-events: auto;
+        display: block;
+        position: fixed;
+        top: 620px;
+        right: 153px;
+      }
+
+      @media (min-width: $screen-mobile) {
+        pointer-events: auto;
+        display: block;
+        position: fixed;
+        top: 688px;
+        right: 165px;
+      }
+      @media (min-width: $screen-tablet) {
+        pointer-events: auto;
+        display: block;
+        position: fixed;
+        top: 925px;
+        right: 70px;
+      }
+      @media (min-width: $screen-desktop) {
+        pointer-events: auto;
+        display: block;
+        position: fixed;
+        top: 650px;
+        right: 50px;
+      }
     }
   }
 

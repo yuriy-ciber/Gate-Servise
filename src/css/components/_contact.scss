@@ -7,39 +7,42 @@
   &__container {
     @include flex-center(space-betwwen);
     margin: 0 auto;
-    pad: 0px 10px;
-    // height: 100vh;
+    padding: 0px 20px;
   }
 
   &__title {
-    @include title($size: 28px);
+    @include title($size: 28px, $color: $dark);
     margin-bottom: 50px;
     position: relative;
 
     &::after {
+      visibility: hidden;
       content: "";
       position: absolute;
       height: 3px;
-      width: 70%;
+      width: 100%;
       left: 0;
       top: 80px;
       background-color: $grey-dark;
 
       @media (min-width: $screen-tablet) {
         content: "";
+        visibility: visible;
         position: absolute;
         height: 3px;
-        width: 70%;
+        width: 100%;
         left: 0;
         top: 60px;
+        border-radius: 50% 50%;
         background-color: $grey-dark;
       }
 
       @media (min-width: $screen-desktop) {
+        visibility: visible;
         content: "";
         position: absolute;
         height: 3px;
-        width: 70%;
+        width: 100%;
         left: 0;
         top: 60px;
         background-color: $grey-dark;

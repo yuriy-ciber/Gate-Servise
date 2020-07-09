@@ -1,8 +1,13 @@
 .brand {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-image: url(../images/wall.jpg);
   @include bg-image;
+
+  @media (min-width: $screen-desktop) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
   &__container {
     @include flex-center(space-between);
   }
@@ -13,13 +18,15 @@
     max-width: 550px;
     margin-bottom: 50px;
     position: relative;
+    text-align: center;
 
     &::after {
+      visibility: hidden;
       content: "";
       position: absolute;
       height: 3px;
       width: 70%;
-      left: 0;
+      left: 30px;
       top: 90px;
       background-color: $dark;
     }
@@ -86,6 +93,7 @@
   }
   &__wrap {
     max-width: 350px;
+    margin-bottom: 18px;
 
     @media (min-width: $screen-desktop) {
       max-height: 150px;

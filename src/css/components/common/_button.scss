@@ -12,6 +12,7 @@
   padding: 12px 24px;
   outline: none;
   cursor: pointer;
+  border-radius: 4px;
 
   @media screen and (min-width: $screen-desktop) {
     width: fit-content;

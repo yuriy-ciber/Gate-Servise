@@ -1,5 +1,5 @@
 .calculator {
-  height: 100vh;
+  height: 650px;
   background-image: linear-gradient(
       to top,
       rgba(81, 103, 228, 0.8),
@@ -8,15 +8,16 @@
     url(../images/GantPlus_5.jpg);
   background-repeat: no-repeat;
   background-position-y: 50%;
-  background-size: 353%;
-  padding-top: 10px;
+  background-size: 400%;
+  padding-top: 50px;
 
   @media (min-width: $screen-mobile) {
     padding-top: 50px;
   }
   @media (min-width: $screen-tablet) {
-    padding-top: 150px;
-    background-size: 265%;
+    height: 750px;
+    padding-top: 70px;
+    background-size: 220%;
     background-position-x: 20%;
   }
   @media (min-width: $screen-desktop) {

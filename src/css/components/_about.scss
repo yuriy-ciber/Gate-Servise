@@ -3,6 +3,7 @@
 
   &__container {
     @include flex-center(space-between);
+    padding: 0 20px;
   }
 
   &__title {
@@ -11,9 +12,10 @@
     position: relative;
     text-align: center;
     &::after {
+      visibility: hidden;
       content: "";
       position: absolute;
-      height: 3px;
+      height: 5px;
       width: 70%;
       left: 30px;
       top: 120px;
@@ -24,7 +26,7 @@
       &::after {
         content: "";
         position: absolute;
-        height: 3px;
+        height: 5px;
         width: 70%;
         left: 30px;
         top: 75px;
@@ -34,26 +36,15 @@
 
     @media (min-width: $screen-tablet) {
       &::after {
+        visibility: visible;
         content: "";
         position: absolute;
-        height: 3px;
-        width: 70%;
-        left: 30px;
+        height: 5px;
+        width: 100%;
+        left: 0px;
         top: 50px;
         background-color: $grey-dark;
-      }
-
-      @media (min-wdth: $screen-desktop) {
-        &::after {
-          content: "";
-          position: absolute;
-          height: 3px;
-          width: 70%;
-          left: 0;
-          top: 50px;
-          background-color: $grey-dark;
-          // border-radius: 0 0 50% 50%;
-        }
+        border-radius: 50%;
       }
     }
   }
