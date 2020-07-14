@@ -1,8 +1,5 @@
 .contact {
   @extend %section;
-  // height: 100vh;
-  // padding-top: 100px;
-  // padding-bottom: 60px;
 
   &__container {
     @include flex-center(space-betwwen);
@@ -57,21 +54,34 @@
     color: $grey-dark;
     max-width: 600px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
   &__list {
     @include flex-center;
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-tablet) {
+      width: 100%;
+      @include flex-row(space-between);
+      margin-bottom: 15px;
+    }
 
     @media (min-width: $screen-desktop) {
       width: 100%;
       @include flex-row(space-between);
+      margin-bottom: 15px;
     }
   }
 
   &__item {
     @include flex-center;
     &:not(:last-child) {
-      margin-bottom: 50px;
+      margin-bottom: 25px;
+    }
+    @media (min-width: $screen-tablet) {
+      &:not(:last-child) {
+        margin-bottom: 0px;
+      }
     }
 
     @media (min-width: 1024px) {
@@ -92,7 +102,7 @@
   }
 
   &__wrap--lifecel {
-    width: 250px;
+    width: 180px;
 
     @media (min-width: $screen-desktop) {
       width: 385px;
@@ -109,7 +119,7 @@
     height: 100%;
     object-fit: cover;
     transition: all 0.5s ease 0s;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
     @media (min-width: 1024px) {
       width: 100%;
@@ -119,4 +129,9 @@
       margin-bottom: 50px;
     }
   }
+}
+#map {
+  border: 1px solid blue;
+  border-radius: 5px;
+  max-width: 100%;
 }

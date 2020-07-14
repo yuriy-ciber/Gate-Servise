@@ -12,7 +12,8 @@
   padding-top: 50px;
 
   @media (min-width: $screen-mobile) {
-    padding-top: 50px;
+    height: 740px;
+    padding-top: 60px;
   }
   @media (min-width: $screen-tablet) {
     height: 750px;
@@ -129,6 +130,6 @@
   }
   &__cost {
     font-size: $H300;
-    color: $blue;
+    color: yellow;
   }
 }

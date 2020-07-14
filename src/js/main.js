@@ -1,4 +1,7 @@
-// import { useMap } from "./map";
+import { useMap } from "./map";
+useMap();
+
+//***************Бургер меню*******************
 document.addEventListener("DOMContentLoaded", () => {
   const $burger = document.querySelector(".header__burger");
   const $menu = document.querySelector(".header__menu");
@@ -40,7 +43,7 @@ const headerBackGround = () => {
   };
 };
 
-headerBackGround();
+// headerBackGround();
 //---------------анимация ссылки нв верх-----------------
 
 const iconToTop = document.querySelector(".avtomatica__top");
@@ -59,6 +62,8 @@ window.addEventListener("scroll", () => {
 document.getElementById("calc").onclick = getResult;
 document.getElementById("clear").onclick = clearCalculator;
 const widthGate = document.querySelector(".calculator__item--width");
+
+const bodyCalculator = document.querySelector(".calculator__body");
 const heightGate = document.querySelector(".calculator__item--heigth");
 const typeAvtomatic = document.getElementById("avtomatic");
 const typeBrand = document.getElementById("manufacturer");
@@ -83,3 +88,9 @@ function clearCalculator() {
 
 typeAvtomatic.onchange = getResult;
 typeBrand.onchange = getResult;
+
+fetch("https://api.privatbank.ua/p24api/pubinfo?json&exchange&cours").then(
+  function (data) {
+    console.log(data);
+  }
+);
