@@ -163,12 +163,20 @@
     display: flex;
   }
   &__price-usd {
-    font-size: $H300;
+    font-size: $H200;
     color: yellow;
-    margin-right: 16px;
+    margin-right: 10px;
+
+    @media (min-width: $screen-tablet) {
+      font-size: $H300;
+    }
   }
   &__price-grivna {
-    font-size: $H300;
+    font-size: $H200;
     color: yellow;
+
+    @media (min-width: $screen-tablet) {
+      font-size: $H300;
+    }
   }
 }

@@ -9,13 +9,6 @@
     rgba(135, 188, 234, 1) 100%
   );
 
-  // @media (min-width: $screen-tablet) {
-  //   padding-top: 65px;
-  // }
-  // @media (min-width: $screen-desktop) {
-  //   padding-bottom: 30px;
-  // }
-
   &__container {
     @include flex-center;
     @media (min-width: $screen-desktop) {
