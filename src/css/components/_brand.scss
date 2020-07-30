@@ -4,16 +4,21 @@
   background-image: url(../images/wall.jpg);
   @include bg-image;
 
+  @media (min-width: $screen-mobile) {
+    padding-top: 75px;
+  }
+
   @media (min-width: $screen-desktop) {
     padding-top: 100px;
     padding-bottom: 100px;
   }
+
   &__container {
     @include flex-center(space-between);
   }
 
   &__title {
-    @include title($size: 36px);
+    @include title;
     color: $dark;
     max-width: 550px;
     margin-bottom: 50px;
