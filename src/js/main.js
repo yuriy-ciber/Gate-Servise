@@ -57,6 +57,19 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// const iconToTop1 = document.querySelector(".avtomatica__pop");
+// window.addEventListener("scroll", () => {
+//   iconToTop1.classList.toggle("avtomatica__pop--active", window.scrollY > 2300);
+// });
+
+// iconToTop1.addEventListener("click", () => {
+//   window.scrollTo;
+//   ({
+//     top: 0,
+//     left: 0,
+//     behavior: "smooth",
+//   });
+// });
 //------------- Расчет стоимости ворот-------------------
 
 document.getElementById("calc").onclick = getResult;
@@ -82,7 +95,7 @@ function getResult() {
   } else alert("Введите размеры ворот !");
 }
 
-// Сброс калькулятора
+// -----------------Сброс калькулятора--------------------------
 function clearCalculator() {
   widthGate.value = "";
   heightGate.value = "";
@@ -92,6 +105,8 @@ function clearCalculator() {
 
 typeAvtomatic.onchange = getResult;
 typeBrand.onchange = getResult;
+
+//---------------- Получение курса валют------------------------
 
 fetch(" https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5")
   .then((resp) => {
