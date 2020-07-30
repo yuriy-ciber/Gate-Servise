@@ -1,0 +1,71 @@
+$style: photo-grid;
+.photo-grid {
+  &__row {
+    @include flex(flex-start, stretch, column);
+    // @include flex-center;
+
+    @media screen and (min-width: $screen-tablet) {
+      flex-direction: row;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+      &--medium {
+        flex: 1 1 50%;
+      }
+    }
+  }
+  &__col {
+    width: 100%;
+    @include flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $screen-tablet) {
+      width: auto;
+      flex: 1 1 100%;
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+      &--medium {
+        flex: 1 1 50%;
+      }
+      &--large {
+        flex: 1 1 calc(100% / 3 * 2);
+      }
+      &--small {
+        flex: 1 1 calc(100% / 3);
+      }
+    }
+  }
+  &__image-wrapper {
+    position: relative;
+    background-color: $grey;
+    @include padding-hack(71%, cover);
+    margin-bottom: 24px;
+    transition: all 0.3s ease 0s;
+
+    &--marginless {
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $screen-tablet) {
+      margin-bottom: 0;
+      &--large {
+        // padding-bottom: 46.6%;
+        padding-bottom: 41.6%;
+      }
+      &--small {
+        height: auto;
+        padding-bottom: 0;
+      }
+      &--medium {
+        padding-bottom: 30.3%;
+      }
+    }
+    @include media {
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}

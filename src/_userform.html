@@ -1,0 +1,53 @@
+<section class="user-form">
+  <div class="container user-form__container">
+    <h2 class="user-form__title">Свяжитесь с нами</h2>
+    <div class="user-form__text-side">
+      <p class="user-form__text">
+        Если Вам интересны наши работы или у вас есть предложения о
+        сотрудничестве, а также для подбора автоматики для ваших ворот заполните
+        пожалуйста форму.
+      </p>
+    </div>
+    <form
+      class="user-form__form form"
+      id="form"
+      action="#"
+      method="GET"
+      uk-scrollspy="cls: uk-animation-fade; repeat: true"
+    >
+      <input
+        class="input form__input"
+        type="text"
+        placeholder="Ваше имя"
+        name="user-name"
+        id="user-name"
+      />
+      <input
+        class="input form__input"
+        type="tel"
+        placeholder="Ваш телефон"
+        name="phone"
+        id="phone"
+      />
+
+      <input
+        class="input form__input"
+        type="email"
+        placeholder="Ваш email"
+        name="user-email"
+        id="user-email"
+      />
+      <textarea
+        class="form__message"
+        name="user-message"
+        id="user-message"
+        cols="30"
+        rows="6"
+        placeholder="Ваше сообщение"
+      ></textarea>
+      <button class="form__button button" form="form" type="submit">
+        Отправить
+      </button>
+    </form>
+  </div>
+</section>

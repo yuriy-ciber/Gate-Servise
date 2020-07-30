@@ -4,6 +4,13 @@
       Расчет стоимости секционных ворот
     </h2>
     <div
+      class="calculator__info-curs"
+      uk-scrollspy="cls: uk-animation-fade; repeat: true"
+    >
+      <span class="calculator__data">Курс валют на</span>
+      <h3 class="calculator__curs">USD</h3>
+    </div>
+    <div
       class="calculator__body"
       uk-scrollspy="cls: uk-animation-fade; repeat: true"
     >
@@ -60,7 +67,10 @@
         </button>
         <div class="calculator__out">
           <label class="calculator__label"> Стоимость</label>
-          <span class="calculator__cost"></span>
+          <div class="calculator__cost">
+            <span class="calculator__price-usd"></span>
+            <span class="calculator__price-grivna"></span>
+          </div>
         </div>
       </div>
     </div>

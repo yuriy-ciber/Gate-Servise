@@ -23,6 +23,15 @@
     z-index: 3;
     @media (min-width: 1024px) {
       flex: 0 0 60px;
+      margin-right: 20px;
+    }
+  }
+  &__title {
+    color: yellow;
+    z-index: 3;
+    font-size: 18px;
+    @media (min-width: 1024px) {
+      font-size: 24px;
     }
   }
 
@@ -35,9 +44,13 @@
   &__body {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 60px;
+
+    @media (min-width: $screen-tablet) {
+      justify-content: space-between;
+    }
 
     @media (min-width: 1024px) {
       position: relative;

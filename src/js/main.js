@@ -67,7 +67,8 @@ const bodyCalculator = document.querySelector(".calculator__body");
 const heightGate = document.querySelector(".calculator__item--heigth");
 const typeAvtomatic = document.getElementById("avtomatic");
 const typeBrand = document.getElementById("manufacturer");
-const $out = document.querySelector(".calculator__cost");
+const $out = document.querySelector(".calculator__price-usd");
+const $out_2 = document.querySelector(".calculator__price-grivna");
 
 function getResult() {
   if (widthGate.value !== "" && heightGate.value !== "") {
@@ -75,7 +76,9 @@ function getResult() {
       (Number(widthGate.value) / 1000) * (Number(heightGate.value) / 1000);
     console.log(typeof typeBrand.value);
     let cost = square * Number(typeBrand.value) + Number(typeAvtomatic.value);
+    let cost_2 = cost * 28.22;
     $out.innerHTML = `${cost} $`;
+    $out_2.innerHTML = `${cost_2} грн`;
   } else alert("Введите размеры ворот !");
 }
 
@@ -84,13 +87,24 @@ function clearCalculator() {
   widthGate.value = "";
   heightGate.value = "";
   $out.innerHTML = "";
+  $out_2.innerHTML = "";
 }
 
 typeAvtomatic.onchange = getResult;
 typeBrand.onchange = getResult;
 
-fetch("https://api.privatbank.ua/p24api/pubinfo?json&exchange&cours").then(
-  function (data) {
+fetch(" https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5")
+  .then((resp) => {
+    return resp.json();
+  })
+  .then((data) => {
     console.log(data);
-  }
-);
+    let curentData = new Date();
+    document.querySelector(
+      ".calculator__data"
+    ).innerHTML += ` ${curentData.toLocaleString()}:`;
+    let cursUsd = Number(data[0]["sale"]);
+    document.querySelector(
+      ".calculator__curs"
+    ).innerHTML += ` ${cursUsd.toFixed(2)}`;
+  });

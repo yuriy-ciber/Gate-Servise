@@ -1,0 +1,41 @@
+.user-form {
+  background-image: linear-gradient(
+      to top,
+      rgba(252, 190, 225, 0.7),
+      rgba(122, 141, 252, 0.8)
+    ),
+    url(../images/bg_form.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px 0;
+
+  @media (min-width: $screen-mobile) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: $screen-tablet) {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  &__container {
+    @include flex-center;
+  }
+  &__title {
+    @include title($color: $white);
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+  }
+  &__text {
+    @include font($family: $base-font, $size: $H300);
+    max-width: 550px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}

@@ -1,5 +1,5 @@
 .calculator {
-  height: 650px;
+  height: 750px;
   background-image: linear-gradient(
       to top,
       rgba(81, 103, 228, 0.8),
@@ -8,25 +8,24 @@
     url(../images/GantPlus_5.jpg);
   background-repeat: no-repeat;
   background-position-y: 50%;
-  background-size: 400%;
+  background-size: 465%;
   padding-top: 50px;
 
   @media (min-width: $screen-mobile) {
-    height: 740px;
+    height: 800px;
     padding-top: 60px;
   }
   @media (min-width: $screen-tablet) {
-    height: 750px;
+    height: 800px;
     padding-top: 70px;
     background-size: 220%;
     background-position-x: 20%;
   }
   @media (min-width: $screen-desktop) {
+    height: 760px;
     padding-top: 80px;
-    padding-bottom: 50px;
+    // padding-bottom: 50px;
     @include bg-image;
-    // background-size: 100%;
-    // background-position-x: -20%;
   }
 
   &__container {
@@ -42,7 +41,7 @@
     }
 
     @media (min-width: $screen-tablet) {
-      margin-bottom: 80px;
+      margin-bottom: 50px;
     }
 
     @media (min-width: $screen-desktop) {
@@ -50,7 +49,39 @@
       margin-bottom: 50px;
     }
   }
+  &__info-curs {
+    @include flex-center;
+    width: 280px;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.75);
+    padding: 15px 0;
+    border-radius: 5px;
+    margin-bottom: 15px;
 
+    @media (min-width: $screen-tablet) {
+      width: 350px;
+      margin-bottom: 25px;
+    }
+
+    @media (min-width: $screen-desktop) {
+      @include flex-row;
+      width: 550px;
+    }
+  }
+  &__data {
+    @include font();
+    color: $white;
+    text-align: center;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    @media (min-width: $screen-desktop) {
+      margin-right: 16px;
+      margin-bottom: 0px;
+    }
+  }
+  &__curs {
+    color: yellow;
+  }
   &__body {
     background-color: rgba(0, 0, 0, 0.4);
     flex: 1 1;
@@ -129,6 +160,14 @@
     height: 30px;
   }
   &__cost {
+    display: flex;
+  }
+  &__price-usd {
+    font-size: $H300;
+    color: yellow;
+    margin-right: 16px;
+  }
+  &__price-grivna {
     font-size: $H300;
     color: yellow;
   }
