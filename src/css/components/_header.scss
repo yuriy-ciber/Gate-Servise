@@ -143,15 +143,7 @@
     height: 100%;
     transform: translateY(-100%);
     overflow: auto;
-    background: linear-gradient(
-      45deg,
-      rgba(208, 228, 247, 1) 0%,
-      rgba(115, 177, 231, 1) 24%,
-      rgba(10, 119, 213, 1) 50%,
-      rgba(83, 159, 225, 1) 79%,
-      rgba(135, 188, 234, 1) 100%
-    );
-    // background-color: #00a3bf;
+    background-color: #00a3bf;
     padding: 120px 10px 0px 10px;
     transition: all 0.5s ease 0s;
 
